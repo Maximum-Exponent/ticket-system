@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <script src="{% static 'assets/js/forum.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <style>
+        * { margin: 0px; padding: 0px; }
+        body { background: #212523; }
+        .container { background: white; width: 700px; margin: 0 auto; padding-top: 1px; padding-bottom: 5px; }
+        .comment, .reply { margin-top: 5px; padding: 10px; border-bottom: 1px solid black; }
+        .reply { border: 1px solid #ccc; }
+        p { margin-top: 5px; margin-bottom: 5px; }
+        form { margin: 10px; }
+        form h3 { margin-bottom: 5px; }
+        form input, form textarea { width: 100%; padding: 5px; margin-bottom: 10px; }
+        form button.submit, button { background: #4CAF50; color: white; border: none; cursor: pointer; padding: 10px 20px; width: 100%; }
+        button.reply { background: orange; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% for comment in comments %}
+        <div class="comment">
+            <h4>{{ comment.name }}</h4>
+            <p>{{ comment.date }}</p>
+            <p>{{ comment.comment }}</p>
+            <!-- ................................ -->
+            <!--ho dovuto cambiare la funzione js che veniva chiamata nel BUTTON e ho creato la funzione del DOM nella classe JS-->
+            <!--<button class="reply" onclick="reply({{comment.id}}, '{{comment.name}}');">Reply</button>-->
+            <!-- ............................... -->
+            <button type="button" class="reply" data-comment-id="{{ comment.id }}" data-comment-name="{{ comment.name }}">Reply</button>
+            {% for reply in comment.get_replies %}
+            <div class="forum-reply-content">
+                <h4>{{ reply.name }}</h4>
+                <p>{{ reply.date }}</p>
+                <p>{{ reply.comment }}</p>
+                <!--STESSA COSA VALE ANCHE QUI
+                <button type="button" class="reply" data-comment-id="{{reply.id}}" data-comment-name="{{reply.name}}">Reply</button>
+                -->
+            </div>     
+            {% endfor %}
+            <form id="reply-form-{{comment.id}}" action="{% url 'forum' %}" method="post" style="display: none;">
+                {% csrf_token %}
+                <h3 id="title">Reply</h3>
+                <input type="hidden" name="reply_id" value="{{ comment.id }}">
+                <input type="text" name="name" placeholder="Your name" required>
+                <textarea name="comment" placeholder="Your comment" required></textarea>
+                <button class="submit" type="submit" name="submit">Submit</button>
+            </form>
+        </div>
+        {% endfor %}
+        <form action="{% url 'forum' %}" method="post">
+            {% csrf_token %}
+            <h3 id="title">Leave a Comment</h3>
+            <input type="hidden" name="reply_id" id="reply_id" value="0">
+            <input type="text" name="name" placeholder="Your name" required>
+            <textarea name="comment" placeholder="Your comment" required></textarea>
+            <button class="submit" type="submit" name="submit">Submit</button>
+        </form>
+    </div>
+</body>

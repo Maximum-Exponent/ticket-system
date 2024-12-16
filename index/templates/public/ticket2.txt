@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/ticket2.css">
+        <script src="../assets/js/ticket2.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h2 class="logo">Logo</h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a class="services-popup" href="#">Services</a>
+                <a href="#">Contact</a>
+                <button class="btnLogin-popup">Login</button>
+            </nav>
+        </header>
+
+        <div class="services-wrapper">
+            <div class="container">
+                <div class="support-options">
+                    <div class="support-option-1">
+                        <h2>Poni una domanda</h2>
+                        <p>Apri un nuovo ticket</p>
+                        <a href="../public/ticket.html">CREA &#8250;</a>
+                    </div>
+                    <div class="support-option-2">
+                        <h2>Live chat</h2>
+                        <p>Chatta online con i nostri operatori</p>
+                        <a href="../public/404.html">ENTRA IN CHAT ORA &#8250;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="main-support">
+                <h1>Supporto aziendale e IT</h1>
+                <p>Hai bisogno di aiuto per il supporto aziendale?</p>
+                <a href="../public/404.html">Scopri di più</a>
+            </div>
+        </div>
+    </body> 
+</html>

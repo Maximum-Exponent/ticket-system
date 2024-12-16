@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/index.css">
+    </head>
+    <body>
+        <div class="site" id="page">
+            <div id="header" class="border-b header-negative">
+                <!-- header top -->
+                 <div class="header-top">
+                     <div class="container-fluid border-b">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <ul class="nav nav-social">
+                                        <li class="nav-item">Seguici su:</li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.facebook.com/itsumbriaacademy" target="_blank">
+                                                <img src="https://www.itsumbria.it/wp-content/themes/understrap-child/img/icon-facebook-white.svg" alt="facebook">
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://twitter.com/itsumbria" target="_blank">
+                                                <img src="https://www.itsumbria.it/wp-content/themes/understrap-child/img/icon-x-white.svg" alt="twitter" style="height: 12px;">
+                                            </a
+                                            ></li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.instagram.com/its_umbria_academy/" target="_blank">
+                                                <img src="https://www.itsumbria.it/wp-content/themes/understrap-child/img/icon-instagram-white.svg" alt="instagram">
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.linkedin.com/company/its-umbria-academy/" target="_blank">
+                                                <img src="https://www.itsumbria.it/wp-content/themes/understrap-child/img/icon-linkedin-white.svg" alt="linkedin">
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://www.youtube.com/channel/UCY7ZkEwd4yMhMKlZb_PW65Q" target="_blank">
+                                                <img src="https://www.itsumbria.it/wp-content/themes/understrap-child/img/icon-youtube-white.svg" alt="youtube">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="d-flex flex-row justify-content-end">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         halo
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </body>
+</html>

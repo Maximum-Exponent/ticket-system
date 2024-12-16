@@ -1,0 +1,130 @@
+body{
+    font-family: 'TradeGothic-BoldCondTwenty', arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background: #808;
+    color: #1C1C1C;
+    line-height: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+#header{
+    top: 0;
+}
+
+.header-negative, #header.header-negative .header, #header.header-negative .header-top, #header.header-negative .navbar {
+    background-color: #154F78;
+}
+
+#header .container-fluid {
+    padding: 0 40px;
+}
+
+.header-negative .border-b {
+    border-bottom-color: rgba(245, 245, 245, 0.2);
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.justify-content-between {
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+.flex-row {
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+}
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.justify-content-between {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+.flex-row {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+}
+.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.justify-content-end {
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+}
+.flex-row {
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+}
+
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.justify-content-end {
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+}
+.flex-row {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+}
+.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+#header .header-top .nav-social .nav-item {
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+#header .header-top .nav-item {
+    font-family: 'TradeGothic', arial, sans-serif;
+}
+#header .header-top .nav-item {
+    font-size: 0.8em;
+    margin: 0 0 0 30px;
+}
+#header .header-top .nav-item, #header .header-top .nav-link {
+    line-height: 45px;
+}
+#header .nav-item {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
