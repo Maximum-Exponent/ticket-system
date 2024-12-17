@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const replyButtons = document.querySelectorAll('.reply');
     replyButtons.forEach(button => {
