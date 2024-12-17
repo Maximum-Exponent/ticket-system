@@ -31,7 +31,7 @@ const messagePlaceholder = document.getElementById('message-placeholder');
 
 sendTicketButton.addEventListener('click', sendTicket);
 
-function sendTicket() {
+/* function sendTicket() {
     const editor = document.querySelector('.editor');
     const text = editor.innerText || editor.textContent;
   
@@ -43,5 +43,5 @@ function sendTicket() {
       console.log('Ticket sent!');
       //sendComment();
     }
-  }
+  } */
   

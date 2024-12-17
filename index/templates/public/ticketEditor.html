@@ -1,24 +1,38 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../assets/css/ticket.css"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="C:/Users/CiprianiRiccardo/Documents/GitHub/ticket-system/index/static/assets/css/ticketEditor.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <script src="../assets/js/ticket.js" type="text/javascript"></script>
+        <title>Ticket Editor</title>
     </head>
+
     <body>
-        <form>
+        <header>
+            <h2 class="logo">Logo</h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a class="services-popup" href="#">Services</a>
+                <a href="#">Contact</a>
+                <button class="btnLogin-popup">Login</button>
+            </nav>
+        </header>
+        <div class="container">
             <div>
                 <table>
                     <tr>
                         <td>
-                            <label>*Titolo</label>
-                                <div>
-                                    <input type="text" name="titolo" id="titolo" placeholder="Inserisci un titolo">
-                                </div>
+                            <div class="input-box">
+                                <input type="text" name="name" id="title" required>
+                                <label>Titolo</label>
+                            </div>
                         </td>
                         <td>
-                            <label>*Categoria</label>
+                            <label required>*Categoria</label>
                             <div>
-                                <select name="categoria" id="scelta">
+                                <select name="category" id="choose">
                                     <option value="0">- - -</option>
                                     <option value="1">Problema d'iscrizione</option>
                                     <option value="2">Problema tecnico</option>
@@ -26,16 +40,13 @@
                                     <option value="4">Problema audio</option>
                                 </select>
                             </div>
-                        </td>   
+                        </td>
                     </tr>
                 </table>
-                <div>
-                    <label>*Quale è il tuo problema?</label>
-                    <!-- <div>
-                        <input type="text" placeholder="Descrivi il tuo problema">
-                    </div> -->
-                </div>
             </div>
+            <!-- <div class="header">
+                <span id="message-placeholder" style="color: #ccc;">*Qual è il tuo problema?</span>
+            </div> -->
             <div class="toolbar">
                 <button onclick="execCmd('undo')"><i class="fas fa-undo"></i></button>
                 <button onclick="execCmd('redo')"><i class="fas fa-redo"></i></button>
@@ -60,32 +71,16 @@
                 <button onclick="execCmd('indent')"><i class="fas fa-indent"></i></button>
                 <button onclick="execCmd('outdent')"><i class="fas fa-outdent"></i></button>
                 <button onclick="execCmd('createLink', prompt('Enter a URL:', 'http://'))"><i class="fas fa-link"></i></button>
-                <div class="dropdown">
-                    <button><i class="fas fa-font"></i></button>
-                    <div class="dropdown-content">
-                        <button onclick="execCmd('foreColor', 'red')">Red</button>
-                        <button onclick="execCmd('foreColor', 'green')">Green</button>
-                        <button onclick="execCmd('foreColor', 'blue')">Blue</button>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button><i class="fas fa-paint-brush"></i></button>
-                    <div class="dropdown-content">
-                        <button onclick="execCmd('hiliteColor', 'yellow')">Yellow</button>
-                        <button onclick="execCmd('hiliteColor', 'lightgreen')">Light Green</button>
-                        <button onclick="execCmd('hiliteColor', 'lightblue')">Light Blue</button>
-                    </div>
-                </div>
             </div>
-            <div contenteditable="true" class="editor" oninput="updateCharacterCount(this)" onkeydown="limitCharacters(event)" aria-placeholder="Descrivi il tuo problema"></div>
+            <div contenteditable="true" class="editor" oninput="updateCharacterCount(this)" onkeydown="limitCharacters(event)"></div>
             <div class="footer">
-                CHARACTERS REMAINING: <span id="charCount">50000</span>
+                <div class="ncar">
+                    CARATTERI RIMANENTI: <span id="charCount">2000</span>
+                </div> 
+                <button id="sendTicketButton" style="float: right;">Send Ticket</button>
+                <div id="error-message" style="color: red; display: none;">Per favore, compila tutti i campi prima di mandare il ticket</div>
+                <button id="cancelButton" style="float: right; margin-right: 10px;"><a href="/index/" id="cancelLink">Cancella</a></button>
             </div>
         </div>
-
-            <div>
-                </div>
-            </div>
-        </form>
     </body>
 </html>
