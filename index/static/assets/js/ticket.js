@@ -32,14 +32,16 @@ const messagePlaceholder = document.getElementById('message-placeholder');
 sendTicketButton.addEventListener('click', sendTicket);
 
 function sendTicket() {
-  const editor = document.querySelector('.editor');
-  const text = editor.innerText || editor.textContent;
+    const editor = document.querySelector('.editor');
+    const text = editor.innerText || editor.textContent;
   
-  if (text.trim() === '') {
-    messagePlaceholder.style.color = 'red';
-    errorMessage.style.display = 'block';
-  } else {
-    // Send the ticket
-    console.log('Ticket sent!');
+    if (text.trim() === '') {
+      messagePlaceholder.style.color = 'red';
+      errorMessage.style.display = 'block';
+    } else {
+      // Send the ticket
+      console.log('Ticket sent!');
+      //sendComment();
+    }
   }
-}
+  

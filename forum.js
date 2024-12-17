@@ -17,3 +17,14 @@ function reply(id, name) {
         console.log('Replying to comment', commentId, 'by', commentName);
     }
 }
+//added with chat
+//function sendComment() {
+// const editorContent = document.querySelector('.editor').textContent;
+//  const title = document.getElementById('title').value;
+
+  // Invia i dati al server (modifica questo codice per adattarlo alle tue esigenze)
+//  console.log(`Invio il titolo: ${title}`);
+//  console.log(`Invio il contenuto del commento: ${editorContent}`);
+
+  // Aggiungi codice per inviare i dati al server
+//}

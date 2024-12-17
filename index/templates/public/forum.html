@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <script src="{% static 'assets/js/forum.js' %}"></script>
+    <script src="{% static '/assets/js/forum.js' %}"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment Section</title>
+    <title>Forum</title>
     <style>
         * { margin: 0px; padding: 0px; }
         body { background: #212523; }
@@ -59,6 +59,6 @@
             <input type="text" name="name" placeholder="Your name" required>
             <textarea name="comment" placeholder="Your comment" required></textarea>
             <button class="submit" type="submit" name="submit">Submit</button>
-        </form>
+        </form> 
     </div>
 </body>
