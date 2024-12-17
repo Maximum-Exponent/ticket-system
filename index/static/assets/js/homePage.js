@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const services = document.querySelector('.services-wrapper');
     const servicesPopup = document.querySelector('.services-popup');
