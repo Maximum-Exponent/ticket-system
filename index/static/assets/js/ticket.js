@@ -1,4 +1,4 @@
-const maxChars = 2000;
+const maxChars = 1500;
     
     function execCmd(command, value = null) {
         document.execCommand(command, false, value);
