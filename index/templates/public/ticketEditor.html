@@ -3,7 +3,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="C:/Users/CiprianiRiccardo/Documents/GitHub/ticket-system/index/static/assets/css/ticketEditor.css">
+        <!-- <link rel="stylesheet" href="C:/Users/CiprianiRiccardo/Documents/GitHub/ticket-system/index/static/assets/css/ticketEditor.css"> -->
+        <link rel="stylesheet" href="{% static '/assets/css/ticketEditor.css' %}">
+        <script src="{% static '/assets/js/ticketEditor.js' %}" type="text/javascript"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <title>Ticket Editor</title>
     </head>
@@ -74,9 +76,10 @@
             </div>
             <div contenteditable="true" class="editor" oninput="updateCharacterCount(this)" onkeydown="limitCharacters(event)"></div>
             <div class="footer">
-                CARATTERI RIMANENTI: <span id="charCount">2000</span>
+                <div>
+                    CARATTERI RIMANENTI: <span id="charCount">2000</span>
+                </div>
                 <button id="sendTicketButton" style="float: right;">Send Ticket</button>
-                <div id="error-message" style="color: red; display: none;">Per favore, compila tutti i campi prima di mandare il ticket</div>
                 <button id="cancelButton" style="float: right; margin-right: 10px;"><a href="/index/" id="cancelLink">Cancella</a></button>
             </div>
         </div>
